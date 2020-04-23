@@ -1,0 +1,196 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- what_is_corona
+- symptoms
+- concern
+- prevention
+- Vaccination
+- incubation
+- thanks
+- corona_spread
+- corona_food_spread
+- warm_weather
+- high_risk
+- my_name_is
+- worldcases
+- mobile_number
+- email_addr
+- pin
+- world_data
+- demo
+- info
+- state_covid
+entities:
+- NAME
+- NUM
+- EMAIL
+- ZIP
+- location
+- world
+- states
+slots:
+  EMAIL:
+    type: unfeaturized
+    auto_fill: false
+  NAME:
+    type: unfeaturized
+    auto_fill: false
+  NUM:
+    type: unfeaturized
+  ZIP:
+    type: unfeaturized
+  location:
+    type: text
+  states:
+    type: text
+  world:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey! How may I assist you?
+  utter_corona:
+  - text: COVID-19 is a new illness that can affect your lungs and airways. It is
+      caused by a virus called coronavirus. COVID-19 is the disease caused by the
+      new coronavirus that emerged in China in December 2019.
+  utter_symptoms:
+  - text: COVID-19 symptoms includes Cough, Fever and Shortness of breath.
+  utter_concern:
+  - text: yes, from the recent information indicates COVID-19 may be passed from person
+      to person. Community spread is being seen, also. Community spread means people
+      have been infected with the virus in a particular area, including some people
+      who are not sure how or where they became infected. COVID-19 has been detected
+      in people throughout China and in over 100 other countries, including the United
+      States.
+  utter_prevent:
+  - text: 'Wash your hands frequently and thoroughly for at least 20 seconds, Use
+      alcohol-based hand sanitizer if soap and water aren’t available. Cover coughs
+      and sneezes with a tissue, then throw the tissue in the trash. Avoid touching
+      your eyes, nose or mouth with unwashed hands. Stay home when you are sick. Clean
+      and disinfect surfaces and objects people frequently touch. Cover your face
+      with a mask to prevent yourself from getting in contact with coronavirus. '
+  utter_Vaccination:
+  - text: Sorry, there is no vaccine.
+  utter_incubation:
+  - text: It appears that symptoms are showing up in people within 14 days of exposure
+      to the virus.
+  utter_thanks:
+  - text: You're welcome and Stay safe.
+  utter_corona_spread:
+  - text: "This virus was first detected in Wuhan City, Hubei Province, China. The\
+      \ first infections were linked to a live animal market, but the virus is now\
+      \ spreading from person-to-person. It’s important to note that person-to-person\
+      \ spread can happen on a continuum. Some viruses are highly contagious (like\
+      \ measles), while other viruses are less so. The virus that causes COVID-19\
+      \ is spreading from person-to-person. Someone who is actively sick with COVID-19\
+      \ can spread the illness to others. That is why we recommend that these patients\
+      \ be isolated either in the hospital or at home (depending on how sick they\
+      \ are) until they are better and no longer pose a risk of infecting others.\n\
+      How long someone is actively sick can vary so the decision on when to release\
+      \ someone from isolation is made on a case-by-case basis in consultation with\
+      \ doctors, infection prevention and control experts, and public health officials\
+      \ and involves considering specifics of each situation including disease severity,\
+      \ illness signs and symptoms, and results of laboratory testing for that patient.\n\
+      The virus that causes COVID-19 seems to be spreading easily and sustainably\
+      \ in the community (“community spread”) in some affected geographic areas. Community\
+      \ spread means people have been infected with the virus in an area, including\
+      \ some who are not sure how or where they became infected."
+  utter_corona_food_spread:
+  - text: Coronaviruses are generally thought to be spread from person-to-person through
+      respiratory droplets. Currently there is no evidence to support transmission
+      of COVID-19 associated with food. Before preparing or eating food it is important
+      to always wash your hands with soap and water for 20 seconds for general food
+      safety. Throughout the day wash your hands after blowing your nose, coughing
+      or sneezing, or going to the bathroom.
+  utter_warm_weather:
+  - text: It is not yet known whether weather and temperature impact the spread of
+      COVID-19. Some other viruses, like the common cold and flu, spread more during
+      cold weather months but that does not mean it is impossible to become sick with
+      these viruses during other months.  At this time, it is not known whether the
+      spread of COVID-19 will decrease when weather becomes warmer.  There is much
+      more to learn about the transmissibility, severity, and other features associated
+      with COVID-19 and investigations are ongoing.
+  utter_high_risk:
+  - text: Older adults and people of any age who have serious underlying medical conditions
+      may be at higher risk for more serious complications from COVID-19. These people
+      who may be at higher risk of getting very sick from this illness, includes;
+      Older adults, People who have serious underlying medical conditions like...
+      Heart disease, Diabetes, Lung disease.
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a covidbot, which tell about covid updates.
+  utter_ask_NAME:
+  - text: Please provide some detail about you. Tell me your First Name?
+  utter_ask_NUM:
+  - text: What's your mobile number?
+  utter_ask_EMAIL:
+  - text: What's your email address?
+  utter_ask_ZIP:
+  - text: what is your zipcode where you stay?
+  utter_wrong_NUMBER:
+  - text: Mobile Number should be a positive integer and 10 digit number, please try
+      again..
+  utter_wrong_ZIP:
+  - text: Zipcode should be a positive integer and 6 digit number, please try again..
+  utter_submit:
+  - text: "Your details.\nYour First name : {name}\nemail : {email}"
+  utter_ask_location:
+  - text: In what location?
+  utter_default:
+  - text: Sorry, I didn't understand. Try again...
+  utter_custom:
+  - text: Sorry, I didn't get that please try again...
+  utter_worldmap:
+  - image: https://www.nationsonline.org/maps/World-Countries-coronavirus-map.jpg
+    text: Total Number of cases in World are even you can visit this [site](https://www.worldometers.info/coronavirus/)
+  utter_demograhic:
+  - image: https://www.statista.com/graphic/1/1103458/india-novel-coronavirus-covid-19-cases-by-state.jpg
+    text: Total cases in India by demographic way.
+  utter_tell_email:
+  - text: Please provide email address to send to about COVID_19 reports and preservation
+      for it.
+  utter_ask_state:
+  - text: Enter the full state name you want to know covid19 cases.
+actions:
+- utter_greet
+- utter_corona
+- utter_symptoms
+- utter_concern
+- utter_prevent
+- utter_incubation
+- utter_Vaccination
+- utter_thanks
+- utter_iamabot
+- utter_goodbye
+- utter_corona_spread
+- utter_corona_food_spread
+- utter_warm_weather
+- utter_high_risk
+- utter_ask_location
+- action_covid_country
+- utter_ask_NAME
+- utter_ask_NUM
+- utter_ask_EMAIL
+- utter_ask_ZIP
+- utter_wrong_NUMBER
+- utter_wrong_ZIP
+- utter_submit
+- action_custom_fallback
+- utter_custom
+- action_send_email
+- utter_worldmap
+- utter_demograhic
+- action_covid_world
+- utter_tell_email
+- utter_default
+- utter_ask_state
+- action_covid_state
+forms:
+- form_info
